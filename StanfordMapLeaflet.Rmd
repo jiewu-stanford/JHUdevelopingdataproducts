@@ -1,0 +1,12 @@
+```{r,comment="",echo=FALSE}
+Sys.time()
+```
+```{r,echo=FALSE}
+library(leaflet)
+StanfordLatLong <- data.frame(lat=37.4275, lng=-122.1697)
+StanfordSite <- "<a href='http://www.stanford.edu/'>Stanford University</a>"
+StanfordLatLong %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(popup = StanfordSite)
+```
